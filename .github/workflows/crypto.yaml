@@ -1,0 +1,17 @@
+name: crypto-harvester
+on: [push]
+jobs:
+  run:
+    runs-on: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - name: crypto_run
+        env:
+          repo_token: ${{ secrets.Github_token }}
+         run: |
+         
+             # Your ML workflow goes here
+             pip install -r requirements.txt
+             python crypto.py
+    
+   
