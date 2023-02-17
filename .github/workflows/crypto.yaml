@@ -1,5 +1,8 @@
 name: crypto-workflow
-on: workflow_dispatch
+on: 
+  schedule:
+    # Runs "at minute 55 past every hour" (see https://crontab.guru)
+    - cron: '05 * * * *'
 jobs:
   crypto-harvester:
     runs-on: ubuntu-latest
