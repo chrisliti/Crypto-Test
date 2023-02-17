@@ -1,7 +1,7 @@
 name: crypto-workflow
 on: workflow_dispatch
 jobs:
-  build:
+  crypto-harvester:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo content
